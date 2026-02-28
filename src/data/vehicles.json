@@ -1,0 +1,86 @@
+[
+  {
+    "id": "1",
+    "marca": "Volkswagen",
+    "modelo": "Gol Trend",
+    "año": 2018,
+    "kilometraje": "85.000 km",
+    "precio": "Consultar",
+    "imagen": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80",
+    "imagenes": [
+      "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80",
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+    ],
+    "descripcion": "Volkswagen Gol Trend en excelente estado de conservación. Revisado y seleccionado por nuestro equipo. Documentación al día, listo para transferir.",
+    "caracteristicas": {
+      "combustible": "Nafta",
+      "transmision": "Manual",
+      "puertas": "5",
+      "color": "Blanco"
+    }
+  },
+  {
+    "id": "2",
+    "marca": "Ford",
+    "modelo": "Ka",
+    "año": 2020,
+    "kilometraje": "45.000 km",
+    "precio": "Consultar",
+    "imagen": "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
+    "imagenes": [
+      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80",
+      "https://images.unsplash.com/photo-1502877338535-766f14592da0?w=800&q=80"
+    ],
+    "descripcion": "Ford Ka 2020, muy buen estado. Ideal para ciudad. Revisión técnica y documentación en orden.",
+    "caracteristicas": {
+      "combustible": "Nafta",
+      "transmision": "Manual",
+      "puertas": "5",
+      "color": "Gris"
+    }
+  },
+  {
+    "id": "3",
+    "marca": "Chevrolet",
+    "modelo": "Onix",
+    "año": 2021,
+    "kilometraje": "32.000 km",
+    "precio": "Consultar",
+    "imagen": "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=800&q=80",
+    "imagenes": [
+      "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=800&q=80",
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80",
+      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80"
+    ],
+    "descripcion": "Chevrolet Onix 2021, poco uso. Equipamiento completo, aire acondicionado, dirección asistida. Listo para transferir.",
+    "caracteristicas": {
+      "combustible": "Nafta",
+      "transmision": "Manual",
+      "puertas": "5",
+      "color": "Negro"
+    }
+  },
+  {
+    "id": "4",
+    "marca": "Fiat",
+    "modelo": "Cronos",
+    "año": 2019,
+    "kilometraje": "62.000 km",
+    "precio": "Consultar",
+    "imagen": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&q=80",
+    "imagenes": [
+      "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&q=80",
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80",
+      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
+    ],
+    "descripcion": "Fiat Cronos en muy buen estado. Espacioso y cómodo. Revisado por nuestro equipo, documentación al día.",
+    "caracteristicas": {
+      "combustible": "Nafta",
+      "transmision": "Manual",
+      "puertas": "5",
+      "color": "Rojo"
+    }
+  }
+]
