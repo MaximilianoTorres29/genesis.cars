@@ -28,7 +28,7 @@ export function WhyGenesis() {
   return (
     <section
       id="por-que-genesis"
-      className="py-16 md:py-24 bg-white"
+      className="py-16 md:py-24 bg-gradient-to-b from-white to-primary-50/30"
       aria-labelledby="why-title"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,13 +46,12 @@ export function WhyGenesis() {
           {benefits.map((item, index) => (
             <article
               key={item.title}
-              className="p-6 rounded-xl bg-gray-50 border border-gray-100 hover:border-accent-200 hover:shadow-lg transition-all duration-300 animate-on-scroll group"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="p-6 rounded-2xl bg-white border border-gray-100 hover:border-accent-300 hover:shadow-xl hover:shadow-accent-500/10 transition-all duration-300 animate-on-scroll group"
             >
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300 inline-block">
                 {item.icon}
               </div>
-              <h3 className="text-lg font-semibold text-primary-900 mb-2">
+              <h3 className="text-lg font-semibold text-primary-900 mb-2 group-hover:text-accent-700 transition-colors">
                 {item.title}
               </h3>
               <p className="text-primary-600 text-sm leading-relaxed">

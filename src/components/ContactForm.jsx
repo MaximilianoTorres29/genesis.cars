@@ -33,7 +33,7 @@ export function ContactForm() {
   return (
     <section
       id="contacto"
-      className="py-16 md:py-24 bg-gray-50"
+      className="py-16 md:py-24 bg-gradient-to-b from-warm-50/40 to-primary-50/30"
       aria-labelledby="contact-title"
     >
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,7 +54,7 @@ export function ContactForm() {
         ) : (
           <form
             onSubmit={handleSubmit}
-            className="space-y-6 bg-white p-6 md:p-8 rounded-xl border border-gray-200 shadow-sm animate-on-scroll"
+            className="space-y-6 bg-white p-6 md:p-8 rounded-2xl border border-gray-200 shadow-lg shadow-primary-900/5 hover:shadow-xl hover:border-accent-200/60 transition-all duration-300 animate-on-scroll"
           >
             <div>
               <label htmlFor="nombre" className="block text-sm font-medium text-primary-900 mb-1">
@@ -67,7 +67,7 @@ export function ContactForm() {
                 value={formData.nombre}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-accent-400 focus:border-accent-500 outline-none transition"
                 placeholder="Tu nombre"
               />
             </div>
@@ -82,7 +82,7 @@ export function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-accent-400 focus:border-accent-500 outline-none transition"
                 placeholder="tu@email.com"
               />
             </div>
@@ -96,7 +96,7 @@ export function ContactForm() {
                 name="telefono"
                 value={formData.telefono}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-accent-400 focus:border-accent-500 outline-none transition"
                 placeholder="+54 9 299 123 4567"
               />
             </div>
@@ -111,13 +111,13 @@ export function ContactForm() {
                 onChange={handleChange}
                 required
                 rows={4}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none transition resize-none"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-accent-400 focus:border-accent-500 outline-none transition resize-none"
                 placeholder="¿En qué podemos ayudarte?"
               />
             </div>
             <button
               type="submit"
-              className="w-full py-3 px-6 bg-primary-800 hover:bg-primary-900 text-white font-medium rounded-lg transition-colors"
+              className="w-full py-3.5 px-6 bg-gradient-to-r from-primary-800 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-semibold rounded-xl shadow-lg shadow-primary-900/20 transition-all duration-200"
             >
               Enviar mensaje
             </button>

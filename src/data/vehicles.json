@@ -81,5 +81,82 @@
       { "icon": "price", "label": "Precio", "value": "$16.500.000" },
       { "icon": "price", "label": "Financiamos con:", "value": "$7.500.000" }
     ]
+  },
+  {
+    "id": "4",
+    "marca": "Ford",
+    "modelo": "Ecosport Freestyle",
+    "año": 2014,
+    "kilometraje": "137.000 km",
+    "precio": "$16.500.000",
+    "imagen": "/vehicles/ecosport-1.png",
+    "imagenes": [
+      "/vehicles/ecosport-1.png",
+      "/vehicles/ecosport-2.png",
+      "/vehicles/ecosport-3.png"
+    ],
+    "descripcion": "Ford Ecosport Freestyle 2014 en muy buen estado general. Motor 1.6, 137.000 km. Lista para transferir.",
+    "especificaciones": [
+      { "icon": "calendar", "label": "Año", "value": "2014" },
+      { "icon": "gauge", "label": "Kilometraje", "value": "137.000 km" },
+      { "icon": "engine", "label": "Motor", "value": "1.6" },
+      { "icon": "document", "label": "Transferencia", "value": "Lista para transferir" },
+      { "icon": "price", "label": "Precio", "value": "$16.500.000" }
+    ]
+  },
+  {
+    "id": "5",
+    "marca": "Fiat",
+    "modelo": "Punto",
+    "año": 2016,
+    "kilometraje": "97.000 km",
+    "precio": "$16.000.000",
+    "imagen": "/vehicles/punto-1.png",
+    "imagePosition": "38% 38%",
+    "imagenes": [
+      "/vehicles/punto-1.png",
+      "/vehicles/punto-2.png",
+      "/vehicles/punto-3.png",
+      "/vehicles/punto-4.png",
+      "/vehicles/punto-5.png",
+      "/vehicles/punto-6.png"
+    ],
+    "descripcion": "Fiat Punto 2016 Attractive en muy buen estado general. Motor 1.4, 97.000 km. Lista para transferir.",
+    "especificaciones": [
+      { "icon": "calendar", "label": "Año", "value": "2016" },
+      { "icon": "gauge", "label": "Kilometraje", "value": "97.000 km" },
+      { "icon": "engine", "label": "Motor", "value": "1.4" },
+      { "icon": "default", "label": "Versión", "value": "Attractive" },
+      { "icon": "document", "label": "Transferencia", "value": "Lista para transferir" },
+      { "icon": "price", "label": "Precio", "value": "$16.000.000" },
+      { "icon": "price", "label": "Financiamos con:", "value": "$7.500.000" }
+    ]
+  },
+  {
+    "id": "6",
+    "marca": "Volkswagen",
+    "modelo": "Amarok Highline",
+    "año": 2012,
+    "kilometraje": "175.000 km",
+    "precio": "$26.500.000",
+    "imagen": "/vehicles/amarok-1.png",
+    "imagenes": [
+      "/vehicles/amarok-1.png",
+      "/vehicles/amarok-2.png",
+      "/vehicles/amarok-3.png",
+      "/vehicles/amarok-4.png",
+      "/vehicles/amarok-5.png",
+      "/vehicles/amarok-6.png"
+    ],
+    "descripcion": "Volkswagen Amarok Highline 2012 en muy buen estado. Motor 2.0 TDI 180 hp, tracción 4x4, doble cabina, barra de amarre y escalón. Documentación al día, lista para transferir.",
+    "especificaciones": [
+      { "icon": "calendar", "label": "Año", "value": "2012" },
+      { "icon": "gauge", "label": "Kilometraje", "value": "175.000 km" },
+      { "icon": "engine", "label": "Motor", "value": "2.0 TDI" },
+      { "icon": "default", "label": "Potencia", "value": "180 hp" },
+      { "icon": "default", "label": "Tracción", "value": "4x4" },
+      { "icon": "document", "label": "Transferencia", "value": "Lista para transferir" },
+      { "icon": "price", "label": "Precio", "value": "$26.500.000" }
+    ]
   }
 ]

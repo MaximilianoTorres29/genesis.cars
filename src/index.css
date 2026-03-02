@@ -13,29 +13,41 @@
   }
 }
 
-/* Animación Hero (fade-in con delay) */
+/* Hero: fade-in con delay */
 .hero-fade-in {
   opacity: 0;
-  animation: heroFadeIn 0.8s ease-out forwards;
+  animation: heroFadeIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 @keyframes heroFadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Animaciones de scroll reveal */
+/* Scroll reveal con suavidad */
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .animate-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Recorte profesional: centra el vehículo y reduce cielo/suelo */
+/* Stagger para hijos (opcional) */
+.stagger-1 { transition-delay: 0.05s; }
+.stagger-2 { transition-delay: 0.1s; }
+.stagger-3 { transition-delay: 0.15s; }
+.stagger-4 { transition-delay: 0.2s; }
+
+/* Cards: auto centrado en el recuadro */
+.vehicle-card-image {
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Detalle y miniaturas: recorte centrado (sobrescribible con imagePosition por vehículo) */
 .vehicle-image-crop {
   object-fit: cover;
-  object-position: center 45%;
+  object-position: center center;
 }

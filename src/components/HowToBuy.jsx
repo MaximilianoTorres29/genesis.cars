@@ -12,7 +12,7 @@ export function HowToBuy() {
   return (
     <section
       id="como-trabajamos"
-      className="py-16 md:py-24 bg-white"
+      className="py-16 md:py-24 bg-gradient-to-b from-white to-warm-50/40"
       aria-labelledby="how-title"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,9 +30,9 @@ export function HowToBuy() {
           {steps.map((step, index) => (
             <div
               key={step.number}
-              className="relative text-center animate-on-scroll"
+              className="relative text-center animate-on-scroll group"
             >
-              <div className="w-14 h-14 rounded-full bg-accent-500 text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent-500 to-accent-600 text-white font-bold text-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-accent-500/30 group-hover:scale-105 group-hover:shadow-accent-500/40 transition-all duration-300">
                 {step.number}
               </div>
               <h3 className="text-lg font-semibold text-primary-900 mb-2">
@@ -42,7 +42,7 @@ export function HowToBuy() {
                 {step.description}
               </p>
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-7 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-0.5 bg-accent-200" aria-hidden="true" />
+                <div className="hidden lg:block absolute top-7 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-0.5 bg-gradient-to-r from-accent-300 to-accent-200" aria-hidden="true" />
               )}
             </div>
           ))}

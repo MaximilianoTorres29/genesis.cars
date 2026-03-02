@@ -45,7 +45,7 @@ export function VehicleDetail() {
     );
   }
 
-  const { marca, modelo, año, kilometraje, imagenes, descripcion, caracteristicas, especificaciones } = vehicle;
+  const { marca, modelo, año, kilometraje, imagenes, descripcion, caracteristicas, especificaciones, imagePosition } = vehicle;
   const whatsAppMessage = `Hola, me interesa el ${marca} ${modelo} ${año}. ¿Podrían darme más información?`;
 
   const items = especificaciones || (caracteristicas && Object.entries(caracteristicas).map(([key, value]) => ({
@@ -55,11 +55,11 @@ export function VehicleDetail() {
   })));
 
   return (
-    <main className="min-h-screen pt-24 pb-16">
+    <main className="min-h-screen pt-24 pb-16 bg-gradient-to-b from-primary-50/20 to-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
           to="/#vehiculos"
-          className="inline-flex items-center gap-2 text-primary-600 hover:text-accent-600 mb-8 transition-colors"
+          className="inline-flex items-center gap-2 text-primary-600 hover:text-accent-600 mb-8 transition-colors duration-200 font-medium"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -70,12 +70,45 @@ export function VehicleDetail() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Galería con recorte centrado en el vehículo */}
           <div className="space-y-4">
-            <div className="aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 vehicle-gallery-main">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 vehicle-gallery-main flex items-center justify-center">
               <img
                 src={imagenes[activeImage]}
                 alt={`${marca} ${modelo} - imagen ${activeImage + 1}`}
-                className="w-full h-full object-cover object-center vehicle-image-crop"
+                className="w-full h-full object-cover vehicle-image-crop"
+                style={imagePosition ? { objectPosition: imagePosition } : undefined}
               />
+              {imagenes.length > 1 && (
+                <>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setActiveImage((prev) => (prev === 0 ? imagenes.length - 1 : prev - 1))
+                    }
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/70 text-primary-800 shadow-md hover:bg-white/90 hover:shadow-lg flex items-center justify-center transition"
+                    aria-label="Imagen anterior"
+                  >
+                    <span className="sr-only">Anterior</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setActiveImage((prev) =>
+                        prev === imagenes.length - 1 ? 0 : prev + 1
+                      )
+                    }
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/70 text-primary-800 shadow-md hover:bg-white/90 hover:shadow-lg flex items-center justify-center transition"
+                    aria-label="Imagen siguiente"
+                  >
+                    <span className="sr-only">Siguiente</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </>
+              )}
             </div>
             {imagenes.length > 1 && (
               <div className="flex gap-2 overflow-x-auto pb-2">
@@ -85,10 +118,17 @@ export function VehicleDetail() {
                     type="button"
                     onClick={() => setActiveImage(index)}
                     className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition ${
-                      activeImage === index ? 'border-primary-600 ring-2 ring-primary-200' : 'border-gray-200 hover:border-primary-300'
+                      activeImage === index
+                        ? 'border-primary-600 ring-2 ring-primary-200'
+                        : 'border-gray-200 hover:border-primary-300'
                     }`}
                   >
-                    <img src={img} alt="" className="w-full h-full object-cover object-center vehicle-image-crop" />
+                    <img
+                      src={img}
+                      alt=""
+                      className="w-full h-full object-cover vehicle-image-crop"
+                      style={imagePosition ? { objectPosition: imagePosition } : undefined}
+                    />
                   </button>
                 ))}
               </div>
@@ -110,7 +150,7 @@ export function VehicleDetail() {
             </p>
 
             {items && items.length > 0 && (
-              <div className="mb-8 p-6 bg-gray-50 rounded-xl border border-gray-100">
+              <div className="mb-8 p-6 bg-white rounded-2xl border border-gray-100 shadow-lg shadow-primary-900/5">
                 <h2 className="text-sm font-semibold text-primary-500 uppercase tracking-wider mb-4">Especificaciones</h2>
                 <ul className="space-y-3">
                   {items.map((item, idx) => {
