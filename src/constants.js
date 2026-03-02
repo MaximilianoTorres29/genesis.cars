@@ -5,3 +5,6 @@ export const CONTACT_EMAIL = 'maximilianotorres147@gmail.com';
 
 export const getWhatsAppUrl = (message = WHATSAPP_MESSAGE) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+/** Aclaración para precios: la transferencia no está incluida */
+export const PRICE_TRANSFER_NOTE = '+ transferencia';

@@ -17,14 +17,19 @@ Landing profesional para el concesionario de vehículos usados seleccionados **G
 
 ```
 src/
-├── components/     # Header, Footer, Hero, VehicleCard, WhatsAppButton, ContactForm, etc.
+├── components/     # Header, Footer, Hero, VehicleCard, SpecIcon, WhatsAppButton, etc.
 ├── pages/          # Home, VehicleDetail
-├── data/           # vehicles.json (listado de vehículos)
+├── data/           # vehicles.json (listado) + README.md (cómo agregar vehículos)
 ├── constants.js    # WhatsApp, email de contacto
 ├── App.jsx
 ├── main.jsx
 └── index.css
+
+public/
+└── vehicles/       # Fotos de los autos (ej. 6-1.png, 6-2.png por vehículo)
 ```
+
+Para **agregar varios vehículos** seguí la guía en **`src/data/README.md`**: campos del JSON, convención de imágenes e iconos de especificaciones.
 
 ## Cómo ejecutar
 
@@ -44,7 +49,7 @@ npm run preview   # previsualizar el build
 
 ## Datos editables
 
-- **Vehículos**: `src/data/vehicles.json`
+- **Vehículos**: `src/data/vehicles.json` — ver **`src/data/README.md`** para agregar autos nuevos (imágenes, especificaciones, iconos).
 - **WhatsApp**: `src/constants.js` (`WHATSAPP_NUMBER`, `WHATSAPP_MESSAGE`)
 - **Email contacto**: `src/constants.js` (`CONTACT_EMAIL`)
 

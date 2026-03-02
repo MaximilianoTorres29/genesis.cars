@@ -33,3 +33,9 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Recorte profesional: centra el vehículo y reduce cielo/suelo */
+.vehicle-image-crop {
+  object-fit: cover;
+  object-position: center 45%;
+}

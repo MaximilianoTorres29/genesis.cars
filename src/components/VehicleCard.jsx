@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { WhatsAppButton } from './WhatsAppButton';
+import { PRICE_TRANSFER_NOTE } from '../constants';
 
 /**
  * Card de vehículo para la galería.
@@ -18,7 +19,7 @@ export function VehicleCard({ vehicle }) {
             <img
               src={imagen}
               alt={`${marca} ${modelo} ${año}`}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              className="w-full h-full object-cover object-center vehicle-image-crop group-hover:scale-105 transition-transform duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <span className="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-white/95 backdrop-blur-sm text-primary-900 text-xs font-semibold shadow-sm">
@@ -43,7 +44,7 @@ export function VehicleCard({ vehicle }) {
               {precio && (
                 <li className="flex items-center gap-1.5">
                   <span className="text-accent-500 group-hover:text-green-600 transition-colors duration-200" aria-hidden="true">●</span>
-                  {precio}
+                  {precio.includes('$') ? `${precio} (${PRICE_TRANSFER_NOTE})` : precio}
                 </li>
               )}
             </ul>

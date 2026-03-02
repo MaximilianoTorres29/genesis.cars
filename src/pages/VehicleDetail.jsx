@@ -1,13 +1,25 @@
 import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { WhatsAppButton } from '../components/WhatsAppButton';
+import { SpecIcon } from '../components/SpecIcon';
+import { PRICE_TRANSFER_NOTE } from '../constants';
 import vehiclesData from '../data/vehicles.json';
 
 const vehiclesList = Array.isArray(vehiclesData) ? vehiclesData : [];
 
+/** Mapeo de keys de caracteristicas a iconos (para vehículos sin especificaciones) */
+const keyToIcon = {
+  año: 'calendar',
+  combustible: 'fuel',
+  transmision: 'gear',
+  puertas: 'default',
+  color: 'default',
+  kilometraje: 'gauge',
+};
+
 /**
  * Página de detalle de un vehículo.
- * Muestra galería, descripción, características y CTA WhatsApp.
+ * Galería con recorte profesional, descripción y especificaciones con iconos.
  */
 export function VehicleDetail() {
   const { id } = useParams();
@@ -25,7 +37,7 @@ export function VehicleDetail() {
       <main className="min-h-screen pt-24 pb-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-2xl font-bold text-primary-900 mb-4">Vehículo no encontrado</h1>
-          <Link to="/" className="text-accent-600 hover:underline">
+          <Link to="/#vehiculos" className="text-accent-600 hover:underline">
             Volver al inicio
           </Link>
         </div>
@@ -33,8 +45,14 @@ export function VehicleDetail() {
     );
   }
 
-  const { marca, modelo, año, kilometraje, imagenes, descripcion, caracteristicas } = vehicle;
+  const { marca, modelo, año, kilometraje, imagenes, descripcion, caracteristicas, especificaciones } = vehicle;
   const whatsAppMessage = `Hola, me interesa el ${marca} ${modelo} ${año}. ¿Podrían darme más información?`;
+
+  const items = especificaciones || (caracteristicas && Object.entries(caracteristicas).map(([key, value]) => ({
+    icon: keyToIcon[key] || 'default',
+    label: key.charAt(0).toUpperCase() + key.slice(1),
+    value,
+  })));
 
   return (
     <main className="min-h-screen pt-24 pb-16">
@@ -50,13 +68,13 @@ export function VehicleDetail() {
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* Galería */}
+          {/* Galería con recorte centrado en el vehículo */}
           <div className="space-y-4">
-            <div className="aspect-[4/3] rounded-xl overflow-hidden bg-gray-100">
+            <div className="aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 vehicle-gallery-main">
               <img
                 src={imagenes[activeImage]}
                 alt={`${marca} ${modelo} - imagen ${activeImage + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center vehicle-image-crop"
               />
             </div>
             {imagenes.length > 1 && (
@@ -67,10 +85,10 @@ export function VehicleDetail() {
                     type="button"
                     onClick={() => setActiveImage(index)}
                     className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition ${
-                      activeImage === index ? 'border-accent-500' : 'border-gray-200 hover:border-accent-300'
+                      activeImage === index ? 'border-primary-600 ring-2 ring-primary-200' : 'border-gray-200 hover:border-primary-300'
                     }`}
                   >
-                    <img src={img} alt="" className="w-full h-full object-cover" />
+                    <img src={img} alt="" className="w-full h-full object-cover object-center vehicle-image-crop" />
                   </button>
                 ))}
               </div>
@@ -91,16 +109,21 @@ export function VehicleDetail() {
               {descripcion}
             </p>
 
-            {caracteristicas && (
-              <div className="mb-8 p-6 bg-gray-50 rounded-xl">
-                <h2 className="text-lg font-semibold text-primary-900 mb-4">Características</h2>
-                <ul className="grid grid-cols-2 gap-3 text-sm">
-                  {Object.entries(caracteristicas).map(([key, value]) => (
-                    <li key={key} className="flex justify-between">
-                      <span className="text-primary-600 capitalize">{key}:</span>
+            {items && items.length > 0 && (
+              <div className="mb-8 p-6 bg-gray-50 rounded-xl border border-gray-100">
+                <h2 className="text-sm font-semibold text-primary-500 uppercase tracking-wider mb-4">Especificaciones</h2>
+                <ul className="space-y-3">
+                  {items.map((item, idx) => {
+                  const isPrecioFinal = item.label === 'Precio' && item.value?.includes('$');
+                  const value = isPrecioFinal ? `${item.value} (${PRICE_TRANSFER_NOTE})` : item.value;
+                  return (
+                    <li key={idx} className="flex items-center gap-3 text-sm">
+                      <SpecIcon name={item.icon} className="w-5 h-5 text-primary-500" />
+                      <span className="text-primary-600 min-w-[7rem]">{item.label}</span>
                       <span className="font-medium text-primary-900">{value}</span>
                     </li>
-                  ))}
+                  );
+                })}
                 </ul>
               </div>
             )}

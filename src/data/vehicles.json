@@ -2,85 +2,84 @@
   {
     "id": "1",
     "marca": "Volkswagen",
-    "modelo": "Gol Trend",
-    "año": 2018,
-    "kilometraje": "85.000 km",
-    "precio": "Consultar",
-    "imagen": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80",
+    "modelo": "T-Cross Highline Hero",
+    "año": 2020,
+    "kilometraje": "109.000 km",
+    "precio": "$32.500.000",
+    "imagen": "/vehicles/tcross-1.png",
     "imagenes": [
-      "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80",
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+      "/vehicles/tcross-1.png",
+      "/vehicles/tcross-2.png",
+      "/vehicles/tcross-3.png",
+      "/vehicles/tcross-4.png",
+      "/vehicles/tcross-5.png"
     ],
-    "descripcion": "Volkswagen Gol Trend en excelente estado de conservación. Revisado y seleccionado por nuestro equipo. Documentación al día, listo para transferir.",
-    "caracteristicas": {
-      "combustible": "Nafta",
-      "transmision": "Manual",
-      "puertas": "5",
-      "color": "Blanco"
-    }
+    "descripcion": "Volkswagen T-Cross Highline Hero 2020 en excelente estado. Motor 1.6, transmisión automática, interior en cuero, pantalla, sensores de estacionamiento. Documentación al día, lista para transferir.",
+    "especificaciones": [
+      { "icon": "calendar", "label": "Año", "value": "2020" },
+      { "icon": "gauge", "label": "Kilometraje", "value": "109.000 km" },
+      { "icon": "engine", "label": "Motor", "value": "1.6" },
+      { "icon": "gear", "label": "Transmisión", "value": "Automática" },
+      { "icon": "leather", "label": "Interior", "value": "Cuero" },
+      { "icon": "sensor", "label": "Sensores", "value": "De estacionamiento" },
+      { "icon": "screen", "label": "Pantalla", "value": "Touchscreen" },
+      { "icon": "document", "label": "Transferencia", "value": "Lista para transferir" },
+      { "icon": "price", "label": "Precio", "value": "$32.500.000" },
+      { "icon": "price", "label": "Financiamos con:", "value": "$15.000.000" }
+    ]
   },
   {
     "id": "2",
-    "marca": "Ford",
-    "modelo": "Ka",
-    "año": 2020,
-    "kilometraje": "45.000 km",
-    "precio": "Consultar",
-    "imagen": "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
+    "marca": "Toyota",
+    "modelo": "Hilux DX",
+    "año": 2011,
+    "kilometraje": "270.000 km",
+    "precio": "$23.900.000",
+    "imagen": "/vehicles/hilux-1.png",
     "imagenes": [
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80",
-      "https://images.unsplash.com/photo-1502877338535-766f14592da0?w=800&q=80"
+      "/vehicles/hilux-1.png",
+      "/vehicles/hilux-2.png",
+      "/vehicles/hilux-3.png",
+      "/vehicles/hilux-4.png",
+      "/vehicles/hilux-5.png",
+      "/vehicles/hilux-6.png"
     ],
-    "descripcion": "Ford Ka 2020, muy buen estado. Ideal para ciudad. Revisión técnica y documentación en orden.",
-    "caracteristicas": {
-      "combustible": "Nafta",
-      "transmision": "Manual",
-      "puertas": "5",
-      "color": "Gris"
-    }
+    "descripcion": "Toyota Hilux DX 2011 en buen estado. Motor 2.5, doble cabina, lista para transferir. Revisada y con documentación al día.",
+    "especificaciones": [
+      { "icon": "calendar", "label": "Año", "value": "2011" },
+      { "icon": "gauge", "label": "Kilometraje", "value": "270.000 km" },
+      { "icon": "engine", "label": "Motor", "value": "2.5" },
+      { "icon": "default", "label": "Versión", "value": "DX" },
+      { "icon": "document", "label": "Transferencia", "value": "Lista para transferir" },
+      { "icon": "price", "label": "Precio", "value": "$23.900.000" },
+      { "icon": "price", "label": "Financiamos con:", "value": "$13.500.000" }
+    ]
   },
   {
     "id": "3",
-    "marca": "Chevrolet",
-    "modelo": "Onix",
-    "año": 2021,
-    "kilometraje": "32.000 km",
-    "precio": "Consultar",
-    "imagen": "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=800&q=80",
+    "marca": "Renault",
+    "modelo": "Duster Authentique",
+    "año": 2015,
+    "kilometraje": "96.000 km",
+    "precio": "$16.500.000",
+    "imagen": "/vehicles/duster-1.png",
     "imagenes": [
-      "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80",
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80"
+      "/vehicles/duster-1.png",
+      "/vehicles/duster-2.png",
+      "/vehicles/duster-3.png",
+      "/vehicles/duster-4.png",
+      "/vehicles/duster-5.png",
+      "/vehicles/duster-6.png",
+      "/vehicles/duster-7.png"
     ],
-    "descripcion": "Chevrolet Onix 2021, poco uso. Equipamiento completo, aire acondicionado, dirección asistida. Listo para transferir.",
-    "caracteristicas": {
-      "combustible": "Nafta",
-      "transmision": "Manual",
-      "puertas": "5",
-      "color": "Negro"
-    }
-  },
-  {
-    "id": "4",
-    "marca": "Fiat",
-    "modelo": "Cronos",
-    "año": 2019,
-    "kilometraje": "62.000 km",
-    "precio": "Consultar",
-    "imagen": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&q=80",
-    "imagenes": [
-      "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80",
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
-    ],
-    "descripcion": "Fiat Cronos en muy buen estado. Espacioso y cómodo. Revisado por nuestro equipo, documentación al día.",
-    "caracteristicas": {
-      "combustible": "Nafta",
-      "transmision": "Manual",
-      "puertas": "5",
-      "color": "Rojo"
-    }
+    "descripcion": "Renault Duster Authentique 2015 en buen estado. Motor 1.6, 96.000 km, lista para transferir. Revisada y con documentación al día.",
+    "especificaciones": [
+      { "icon": "calendar", "label": "Año", "value": "2015" },
+      { "icon": "gauge", "label": "Kilometraje", "value": "96.000 km" },
+      { "icon": "engine", "label": "Motor", "value": "1.6" },
+      { "icon": "document", "label": "Transferencia", "value": "Lista para transferir" },
+      { "icon": "price", "label": "Precio", "value": "$16.500.000" },
+      { "icon": "price", "label": "Financiamos con:", "value": "$7.500.000" }
+    ]
   }
 ]
