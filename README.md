@@ -2,6 +2,8 @@
 
 Landing profesional para el concesionario de vehículos usados seleccionados **Génesis Cars**. Desarrollada con React, Vite y Tailwind CSS.
 
+**Sitio en vivo:** [genesis-cars.vercel.app](https://genesis-cars.vercel.app)
+
 ## Características
 
 - **Diseño moderno y premium**: Azul oscuro, celeste de acento, tipografía Inter
