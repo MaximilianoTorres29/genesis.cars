@@ -15,19 +15,18 @@ function CarIcon({ className = '' }) {
 }
 
 /**
- * Logo Génesis Cars
- * Desktop: "Génesis Cars" en una línea, icono a la derecha en blanco
- * Mobile: dos líneas centradas ("Génesis" / "Cars"), icono a la derecha en blanco
+ * Logo L&M Automotores
+ * Desktop: "L&M Automotores" en una línea, icono a la derecha en blanco
+ * Mobile: dos líneas centradas ("L&M" / "Automotores"), icono a la derecha en blanco
  */
 export function Logo({ className = '', variant = 'default' }) {
   const isCompact = variant === 'compact';
 
   return (
     <div className={`flex items-center justify-center md:justify-start gap-2 md:gap-3 ${className}`}>
-      {/* Texto: dos líneas centradas en mobile, una línea en desktop */}
       <div className="flex flex-col md:flex-row md:items-center gap-0 md:gap-1.5 text-center md:text-left leading-tight">
-        <span className="text-white font-bold tracking-tight">Génesis</span>
-        <span className="text-accent-400 font-bold tracking-tight">Cars</span>
+        <span className="text-white font-bold tracking-tight">L&M</span>
+        <span className="text-accent-400 font-bold tracking-tight">Automotores</span>
         {!isCompact && (
           <div className="w-12 h-0.5 bg-accent-500 mt-1 mx-auto md:hidden" aria-hidden="true" />
         )}

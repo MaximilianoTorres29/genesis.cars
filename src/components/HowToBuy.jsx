@@ -30,9 +30,9 @@ export function HowToBuy() {
           {steps.map((step, index) => (
             <div
               key={step.number}
-              className="relative text-center animate-on-scroll group"
+              className="relative text-center animate-on-scroll group p-6 rounded-2xl bg-white/80 border border-primary-100 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.06),0_6px_16px_-4px_rgba(15,23,42,0.04)] hover:shadow-[0_12px_24px_-8px_rgba(15,23,42,0.1),0_0_0_1px_rgba(251,191,36,0.08),0_12px_24px_-6px_rgba(245,158,11,0.12)] hover:border-accent-200/60 transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent-500 to-accent-600 text-white font-bold text-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-accent-500/30 group-hover:scale-105 group-hover:shadow-accent-500/40 transition-all duration-300">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent-500 to-accent-600 text-white font-bold text-xl flex items-center justify-center mx-auto mb-4 shadow-[0_4px_14px_0_rgba(245,158,11,0.35)] group-hover:scale-105 group-hover:shadow-[0_8px_20px_0_rgba(245,158,11,0.4)] transition-all duration-300 ring-2 ring-white/50">
                 {step.number}
               </div>
               <h3 className="text-lg font-semibold text-primary-900 mb-2">

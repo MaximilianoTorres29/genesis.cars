@@ -158,5 +158,32 @@
       { "icon": "document", "label": "Transferencia", "value": "Lista para transferir" },
       { "icon": "price", "label": "Precio", "value": "$26.500.000" }
     ]
+  },
+  {
+    "id": "7",
+    "marca": "Chevrolet",
+    "modelo": "Onix LT",
+    "año": 2017,
+    "kilometraje": "150.000 km",
+    "precio": "$15.900.000",
+    "imagen": "/vehicles/onix-6.png",
+    "imagenes": [
+      "/vehicles/onix-6.png",
+      "/vehicles/onix-5.png",
+      "/vehicles/onix-1.png",
+      "/vehicles/onix-2.png",
+      "/vehicles/onix-3.png",
+      "/vehicles/onix-4.png"
+    ],
+    "descripcion": "Chevrolet Onix LT 2017 en excelente estado. 150.000 km, cubiertas nuevas, interior cuidado. Documentación al día, lista para transferir.",
+    "especificaciones": [
+      { "icon": "calendar", "label": "Año", "value": "2017" },
+      { "icon": "gauge", "label": "Kilometraje", "value": "150.000 km" },
+      { "icon": "default", "label": "Estado", "value": "Excelente" },
+      { "icon": "default", "label": "Cubiertas", "value": "Nuevas" },
+      { "icon": "document", "label": "Transferencia", "value": "Lista para transferir" },
+      { "icon": "price", "label": "Precio", "value": "$15.900.000" },
+      { "icon": "price", "label": "Financiamos con:", "value": "$6.900.000" }
+    ]
   }
 ]

@@ -157,8 +157,8 @@ export function VehicleDetail() {
                   const isPrecioFinal = item.label === 'Precio' && item.value?.includes('$');
                   const value = isPrecioFinal ? `${item.value} (${PRICE_TRANSFER_NOTE})` : item.value;
                   return (
-                    <li key={idx} className="flex items-center gap-3 text-sm">
-                      <SpecIcon name={item.icon} className="w-5 h-5 text-primary-500" />
+                    <li key={idx} className="flex items-center gap-3 text-sm group">
+                      <SpecIcon name={item.icon} className="w-5 h-5 text-primary-500 group-hover:text-orange-500 transition-colors" />
                       <span className="text-primary-600 min-w-[7rem]">{item.label}</span>
                       <span className="font-medium text-primary-900">{value}</span>
                     </li>

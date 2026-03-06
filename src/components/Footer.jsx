@@ -40,7 +40,7 @@ export function Footer() {
 
         <div className="mt-10 pt-8 border-t border-primary-700/50 text-center">
           <p className="text-gray-500 text-sm">
-            &copy; {currentYear} Génesis Cars. Todos los derechos reservados.
+            &copy; {currentYear} L&M Automotores. Todos los derechos reservados.
           </p>
         </div>
       </div>

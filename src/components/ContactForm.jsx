@@ -22,7 +22,7 @@ export function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Contacto Génesis Cars - ${formData.nombre}`);
+    const subject = encodeURIComponent(`Contacto L&M Automotores - ${formData.nombre}`);
     const body = encodeURIComponent(
       `Nombre: ${formData.nombre}\nEmail: ${formData.email}\nTeléfono: ${formData.telefono}\n\nMensaje:\n${formData.mensaje}`
     );

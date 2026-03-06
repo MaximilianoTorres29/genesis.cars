@@ -1,6 +1,6 @@
-# Génesis Cars – Landing Page
+# L&M Automotores – Landing Page
 
-Landing profesional para el concesionario de vehículos usados seleccionados **Génesis Cars**. Desarrollada con React, Vite y Tailwind CSS.
+Landing profesional para el concesionario de vehículos usados seleccionados **L&M Automotores**. Desarrollada con React, Vite y Tailwind CSS.
 
 **Sitio en vivo:** [genesis-cars.vercel.app](https://genesis-cars.vercel.app)
 
