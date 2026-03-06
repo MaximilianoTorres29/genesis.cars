@@ -45,7 +45,7 @@ export function VehicleDetail() {
     );
   }
 
-  const { marca, modelo, año, kilometraje, imagenes, descripcion, caracteristicas, especificaciones, imagePosition } = vehicle;
+  const { marca, modelo, año, kilometraje, imagenes, caracteristicas, especificaciones, imagePosition } = vehicle;
   const whatsAppMessage = `Hola, me interesa el ${marca} ${modelo} ${año}. ¿Podrían darme más información?`;
 
   const items = especificaciones || (caracteristicas && Object.entries(caracteristicas).map(([key, value]) => ({
@@ -144,10 +144,6 @@ export function VehicleDetail() {
               <li><strong>Año:</strong> {año}</li>
               <li><strong>Kilometraje:</strong> {kilometraje}</li>
             </ul>
-
-            <p className="text-primary-700 leading-relaxed mb-8">
-              {descripcion}
-            </p>
 
             {items && items.length > 0 && (
               <div className="mb-8 p-6 bg-white rounded-2xl border border-gray-100 shadow-lg shadow-primary-900/5">
