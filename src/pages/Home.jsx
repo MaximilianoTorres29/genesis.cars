@@ -19,7 +19,7 @@ export function Home() {
             </div>
             <p className="text-section-subtitle text-primary-600 text-center mt-4 mb-2 px-2 animate-slide-up" style={{ animationFillMode: 'backwards', animationDelay: '200ms' }}>Unidades seleccionadas, revisadas y listas para transferir</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 items-stretch">
             {vehiclesData.map((v, i) => <VehicleCard key={v.id} vehicle={v} index={i} />)}
           </div>
         </div>

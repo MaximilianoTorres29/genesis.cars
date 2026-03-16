@@ -22,15 +22,16 @@ const PriceIcon = ({ className = 'w-4 h-4' }) => (
 );
 
 export const VehicleCard = memo(function VehicleCard({ vehicle, index = 0 }) {
-  const { id, marca, modelo, año, precio, km, imagen } = vehicle;
+  const { id, marca, modelo, año, km, imagen, especificaciones } = vehicle;
+  const financiacion = especificaciones?.find((s) => s.label === 'Financiamos con')?.value;
   const msg = `Hola, me interesa el ${marca} ${modelo} ${año}. ¿Podrían darme más información?`;
 
   return (
     <article
-      className="group relative rounded-xl bg-white border border-primary-100 overflow-hidden shadow-xl hover:border-accent-300/90 hover:shadow-[0_12px_40px_rgba(15,23,42,0.18),0_0_0_1px_rgba(251,191,36,0.25),0_0_20px_rgba(245,158,11,0.14)] hover:-translate-y-1 transition-all duration-300 ease-out animate-scale-in-orange"
+      className="group relative flex flex-col min-w-0 rounded-xl bg-white border border-primary-100 overflow-hidden shadow-xl hover:border-accent-300/90 hover:shadow-[0_12px_40px_rgba(15,23,42,0.18),0_0_0_1px_rgba(251,191,36,0.25),0_0_20px_rgba(245,158,11,0.14)] hover:-translate-y-1 transition-all duration-300 ease-out animate-scale-in-orange"
       style={{ animationDelay: `${Math.min(index, 6) * 50}ms`, animationFillMode: 'backwards' }}
     >
-      <Link to={`/vehiculo/${id}`} className="block">
+      <Link to={`/vehiculo/${id}`} className="block min-w-0 flex-1">
         {/* Imagen a fondo completo, sin recuadro */}
         <div className="relative aspect-[4/3] overflow-hidden">
           {imagen ? (
@@ -50,28 +51,28 @@ export const VehicleCard = memo(function VehicleCard({ vehicle, index = 0 }) {
         </div>
 
         {/* Contenido */}
-        <div className="p-3 sm:p-4">
+        <div className="p-3 sm:p-4 min-w-0">
           <h3 className="text-sm font-bold text-primary-900 group-hover:text-accent-600 transition-colors leading-tight line-clamp-2">
             {marca} {modelo}
           </h3>
-          <ul className="mt-2 space-y-1.5 text-xs text-primary-600">
-            <li className="flex items-center gap-2">
+          <ul className="mt-2 space-y-1.5 text-xs text-primary-600 min-w-0">
+            <li className="flex items-center gap-2 min-w-0">
               <span className="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-lg text-accent-500 bg-accent-50 group-hover:bg-accent-500 group-hover:text-white transition-all duration-200">
                 <CalendarIcon className="w-3.5 h-3.5" />
               </span>
-              <span>{año}</span>
+              <span className="min-w-0 truncate">{año}</span>
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 min-w-0">
               <span className="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-lg text-accent-500 bg-accent-50 group-hover:bg-accent-500 group-hover:text-white transition-all duration-200">
                 <GaugeIcon className="w-3.5 h-3.5" />
               </span>
-              <span>{km} km</span>
+              <span className="min-w-0 truncate">{km} km</span>
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 min-w-0">
               <span className="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-lg text-accent-500 bg-accent-50 group-hover:bg-accent-500 group-hover:text-white transition-all duration-200">
                 <PriceIcon className="w-3.5 h-3.5" />
               </span>
-              <span>{precio} + transferencia</span>
+              <span className="min-w-0 break-words line-clamp-2">{financiacion ? `Financia y retira con ${financiacion}` : 'Consultanos para financiar'}</span>
             </li>
           </ul>
         </div>

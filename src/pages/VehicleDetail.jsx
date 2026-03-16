@@ -28,6 +28,12 @@ const specIcons = {
   'Financiamos con': (
     <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
   ),
+  'Financia y retira con': (
+    <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+  ),
+  Financiación: (
+    <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+  ),
   Tracción: (
     <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 17a2 2 0 11-4 0 2 2 0 014 0zM16 17a2 2 0 11-4 0 2 2 0 014 0zM5.5 17H4v-4.5a2.5 2.5 0 012.5-2.5h9a2.5 2.5 0 012.5 2.5V17h-1.5M4 12.5h16" /></svg>
   ),
@@ -69,12 +75,24 @@ export function VehicleDetail() {
   }
 
   const msg = `Hola, me interesa el ${vehicle.marca} ${vehicle.modelo} ${vehicle.año}. ¿Podrían darme más información?`;
-  const specs = vehicle.especificaciones || [
+  const rawSpecs = vehicle.especificaciones || [
     { label: 'Kilometraje', value: `${vehicle.km} km` },
     { label: 'Año', value: vehicle.año },
-    { label: 'Precio', value: `${vehicle.precio} + transferencia` },
+    { label: 'Financiación', value: 'Consultanos para financiar' },
     { label: 'Transferencia', value: vehicle.descripcion }
   ];
+  let specs = rawSpecs
+    .filter((s) => s.label !== 'Precio')
+    .map((s) => {
+      if (s.label === 'Financiamos con') {
+        return { label: 'Financiación', value: `Financia y retira con ${s.value}` };
+      }
+      if (s.label === 'Financia y retira con') return { label: 'Financiación', value: s.value };
+      return s;
+    });
+  if (!specs.some((s) => s.label === 'Financiación')) {
+    specs = [...specs, { label: 'Financiación', value: 'Consultanos para financiar' }];
+  }
 
   const images = vehicle.imagenes && vehicle.imagenes.length > 0 ? vehicle.imagenes : (vehicle.imagen ? [vehicle.imagen] : []);
   const mainImage = images[selectedImageIndex] || vehicle.imagen;
