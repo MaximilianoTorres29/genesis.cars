@@ -28,7 +28,7 @@ export const VehicleCard = memo(function VehicleCard({ vehicle, index = 0 }) {
 
   return (
     <article
-      className="group relative flex flex-col min-w-0 rounded-xl bg-white border border-primary-100 overflow-hidden shadow-xl hover:border-accent-300/90 hover:shadow-[0_12px_40px_rgba(15,23,42,0.18),0_0_0_1px_rgba(251,191,36,0.25),0_0_20px_rgba(245,158,11,0.14)] hover:-translate-y-1 transition-all duration-300 ease-out animate-scale-in-orange"
+      className="group relative flex flex-col min-w-0 h-full rounded-xl bg-white border border-primary-100 overflow-hidden shadow-xl hover:border-accent-300/90 hover:shadow-[0_12px_40px_rgba(15,23,42,0.18),0_0_0_1px_rgba(251,191,36,0.25),0_0_20px_rgba(245,158,11,0.14)] hover:-translate-y-1 transition-all duration-300 ease-out animate-scale-in-orange"
       style={{ animationDelay: `${Math.min(index, 6) * 50}ms`, animationFillMode: 'backwards' }}
     >
       <Link to={`/vehiculo/${id}`} className="block min-w-0 flex-1">
@@ -77,7 +77,7 @@ export const VehicleCard = memo(function VehicleCard({ vehicle, index = 0 }) {
           </ul>
         </div>
       </Link>
-      <div className="px-3 sm:px-4 pb-3 sm:pb-4">
+      <div className="px-3 sm:px-4 pb-3 sm:pb-4 mt-auto">
         <WhatsAppButton
           message={msg}
           className="!w-full !py-1.5 !rounded-xl !text-xs !font-medium !border !border-primary-200 !bg-white !text-primary-600 hover:!border-[#25D366] hover:!bg-[#25D366] hover:!text-white active:!scale-[0.98] transition-all duration-200 touch-manipulation"
